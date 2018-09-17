@@ -104,7 +104,11 @@ nav h1 a {
 }
 
 #breadcrumb {
+  /*taking out to try to get rid of grey area
     padding: 10px 40px 16px;
+    */
+    padding: 10px 0px 16px;
+
     list-style: none;
     background-color: #eee;
     font-size: 17px;
@@ -113,7 +117,9 @@ nav h1 a {
 }
 /*help with position top nav Home */
 ul#breadcrumb {
-    width: 92.75%
+  /*changing to get rid of mobile grey area
+    width: 92.75%*/
+    width: 100%;
 }
 
 /* Display list items side by side */
@@ -301,8 +307,9 @@ ul#breadcrumb {
 }
 
 #restaurant-container, #reviews-container {
+  /*seeing what happens without this
   width: 100%
-  padding: 10%;
+  padding: 10%;*/
   justify-content: center;
 }
 
@@ -361,4 +368,25 @@ ul#breadcrumb {
 
 .skip:focus {
     top: 0;
+}
+
+/*=======================Media Queries========================*/
+/*trying to get to fill screen for mobile, currently
+have grey sides showing*/
+@media screen and (max-width: 400px) {
+/*
+.inside {
+  width: 100%;
+  max-width: 360px;
+}
+*/
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  } 
+
+#reviews-container {
+  padding: 0;
+
+}
 }
